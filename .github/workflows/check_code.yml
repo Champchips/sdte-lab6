@@ -4,15 +4,17 @@ on:
   push:
     branches:
       - "main"
+  pull_request:
+    branches:
+      - "main"
 
 jobs:
   check-code:
     name: Check code
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout the repo
         uses: actions/checkout@v2
       - run: npm install
       - run: npm ci
       - run: npm run test
-  
