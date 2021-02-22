@@ -13,6 +13,6 @@ jobs:
       - name: Checkout the repo
         uses: actions/checkout@v2
       - run: npm install
-      - run: npm run prettier-check
+      - run: npm ci
       - run: npm run test
   
