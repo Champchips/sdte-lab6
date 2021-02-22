@@ -7,9 +7,9 @@ on:
   job:
     check-code:
       name: Check code
-        runs-on: ubuntu-latest
-        steps:
-          - name: Checkout the repo
-            uses: actions/checkout@2
-          - run: npm install
-          - run: npm ci
+      runs-on: ubuntu-latest
+      steps:
+        - name: Checkout the repo
+          uses: actions/checkout@2
+        - run: npm install
+        - run: npm ci
